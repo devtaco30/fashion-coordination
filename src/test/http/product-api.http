@@ -1,0 +1,61 @@
+### Account API 테스트 (현재 구현된 기능만)
+
+# 기본 설정
+@baseUrl = http://localhost:8090
+@contentType = application/json
+
+### 1. 최저가 코디 세트 조회
+GET {{baseUrl}}/api/v1/products/coordi-set/min-price/category
+
+### 2. 최저가 브랜드 코디 세트 조회
+GET {{baseUrl}}/api/v1/products/coordi-set/min-price/brand
+
+### 3. 카테고리별 최저, 최고가격 브랜드와 상품 가격 조회
+GET {{baseUrl}}/api/v1/products/price-range?category=pants
+
+### 4. 전체 브랜드 목록 조회
+GET {{baseUrl}}/api/v1/products/brands
+
+### 5. 전체 카테고리 목록 조회
+GET {{baseUrl}}/api/v1/products/categories
+
+### ===== 관리자 API (기능 4) =====
+
+### 4-1. 브랜드 생성 (응답: 생성된 브랜드 객체)
+POST {{baseUrl}}/api/v1/admin/brands
+Content-Type: {{contentType}}
+
+{
+  "name": "테스트 브랜드"
+}
+
+### 4-2. 상품 생성 (응답: 생성된 상품 객체)
+POST {{baseUrl}}/api/v1/admin/products
+Content-Type: {{contentType}}
+
+{
+  "brandId": 10,
+  "categoryId": 1,
+  "price": 15000
+}
+
+### 4-2-1. 상품 생성 (잘못된 요청 - 브랜드 ID 0)
+POST {{baseUrl}}/api/v1/admin/products
+Content-Type: {{contentType}}
+
+{
+  "brandId": 0,
+  "categoryId": 1,
+  "price": 25000
+}
+
+### 4-3. 상품 수정
+PUT {{baseUrl}}/api/v1/admin/products/1
+Content-Type: {{contentType}}
+
+{
+  "price": 20000
+}
+
+### 4-4. 상품 삭제
+DELETE {{baseUrl}}/api/v1/admin/products/1

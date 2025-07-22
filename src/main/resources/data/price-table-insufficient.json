@@ -1,0 +1,83 @@
+{
+  "A": {
+    "TOP": 11200,
+    "OUTER": 5500,
+    "PANTS": 4200,
+    "SNEAKERS": 9000,
+    "BAG": 2000,
+    "HAT": 1700,
+    "SOCKS": 1800
+  },
+  "B": {
+    "TOP": 10500,
+    "OUTER": 5900,
+    "PANTS": 3800,
+    "SNEAKERS": 9100,
+    "BAG": 2100,
+    "HAT": 2000,
+    "SOCKS": 2000
+  },
+  "C": {
+    "TOP": 10000,
+    "OUTER": 6200,
+    "PANTS": 3300,
+    "SNEAKERS": 9200,
+    "BAG": 2200,
+    "HAT": 1900,
+    "SOCKS": 2200
+  },
+  "D": {
+    "TOP": 10100,
+    "OUTER": 5100,
+    "PANTS": 3000,
+    "SNEAKERS": 9500,
+    "BAG": 2500,
+    "HAT": 1500,
+    "SOCKS": 2400
+  },
+  "E": {
+    "TOP": 10700,
+    "OUTER": 5000,
+    "PANTS": 3800,
+    "SNEAKERS": 9900,
+    "BAG": 2300,
+    "HAT": 1800,
+    "SOCKS": 2100
+  },
+  "F": {
+    "TOP": 11200,
+    "OUTER": 7200,
+    "PANTS": 4000,
+    "SNEAKERS": 9300,
+    "BAG": 2100,
+    "HAT": 1600,
+    "SOCKS": 2300
+  },
+  "G": {
+    "TOP": 10500,
+    "OUTER": 5800,
+    "PANTS": 3900,
+    "SNEAKERS": 9000,
+    "BAG": 2200,
+    "HAT": 1700,
+    "SOCKS": 2100
+  },
+  "H": {
+    "TOP": 10800,
+    "OUTER": 6300,
+    "PANTS": 3100,
+    "SNEAKERS": 9700,
+    "BAG": 2100,
+    "HAT": 1600,
+    "SOCKS": 2000
+  },
+  "I": {
+    "TOP": 11400,
+    "OUTER": 6700,
+    "PANTS": 3200,
+    "SNEAKERS": 9500,
+    "BAG": 2400,
+    "HAT": 1700,
+    "SOCKS": 1700
+  }
+} 

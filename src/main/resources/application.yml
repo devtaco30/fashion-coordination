@@ -1,0 +1,50 @@
+server:
+  port: 8090
+  shutdown: graceful
+  
+spring:
+  application:
+    name: fashion-coordination
+  datasource:
+    url: jdbc:h2:mem:testdb;DB_CLOSE_DELAY=-1;MODE=MYSQL;DATABASE_TO_UPPER=false
+    username: fashion
+    password: fashion123
+    driver-class-name: org.h2.Driver
+    hikari:
+      minimum-idle: 5
+      maximum-pool-size: 20
+      idle-timeout: 300000
+      connection-timeout: 20000
+      max-lifetime: 1200000
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    show-sql: false
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.H2Dialect
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+  jackson:
+    time-zone: UTC
+
+logging:
+  level:
+    root: INFO
+
+# Swagger/OpenAPI 설정
+springdoc:
+  default-consumes-media-type: application/json
+  default-produces-media-type: application/json
+  api-docs:
+    groups:
+      enabled: true
+  swagger-ui:
+    path: /docs
+    disable-swagger-default-url: false
+    persist-authorization: true
+  group-configs:
+    - group: fashion
+      packages-to-scan: com.devtaco.fashion.presentation.web
